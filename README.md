@@ -3,7 +3,7 @@
 ### 使用 Clone the Tutorial 
 
 ```
-git clone https://github.com/onion07/react-sscf.git
+git clone https://github.com/onion07/html-extra-text-webpack-plugin.git
 cd html-wepack-plugin_extract-text-webpack-plugin
 npm install
 npm run dev
