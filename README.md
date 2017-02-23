@@ -4,7 +4,7 @@
 
 ```
 git clone https://github.com/onion07/html-extra-text-webpack-plugin.git
-cd html-wepack-plugin_extract-text-webpack-plugin
+cd html-extra-text-webpack-plugin
 npm install
 npm run dev
 
