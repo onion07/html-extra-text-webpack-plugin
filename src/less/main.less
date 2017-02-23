@@ -1,0 +1,198 @@
+@scale: 750/375; 
+@root: 12; 
+@rootS: 12*750/375;  // 设计图缩放，转化rem
+
+@import "../css/reset.less";
+
+
+/** {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}*/
+.display-flex(){
+	display: -webkit-box;      
+    display: -moz-box;        
+  	display: -ms-flexbox;     
+  	display: -webkit-flex;     
+  	display: flex;  
+}
+.box-flex-1(){
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	box-flex: 1;
+
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	-o-flex: 1;
+	flex: 1;
+}
+html,body{
+	font-size: 12px;
+}
+body {
+	font-size: 12px;
+	font-family: SimHei,ubuntu, helvetica, arial;
+	color: #7d7d7d;
+	/*background-color: #eaeaea;*/
+	background-color: #f3f3f3;
+
+}
+i,em{
+	font-style: normal;
+}
+a,button{
+	color: #7d7d7d;
+	font-family: SimHei,ubuntu, helvetica, arial;
+}
+#header {
+	position: relative;
+	width: 100%;
+	background: #fff;
+	.logo{
+		display: inline-block;
+		padding: 10rem/@rootS 50rem/@rootS 10rem/@rootS;
+		img{
+			width: 107rem/@rootS;
+			height: 37rem/@rootS;
+		}
+	}
+	.goto{
+		position: absolute;
+		right: 25rem/@rootS;
+		height: 100%;
+		line-height: 32px;
+		text-decoration: underline;
+		color: #db3043;
+	}
+}
+.wrapper{
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 150rem/@rootS;
+	
+}
+
+/* 404页 */
+.not-find{
+	padding-top: 170rem/@rootS;
+	.block{
+		text-align: center;
+		.aoo{
+			display: inline-block;
+			width: 211rem/@rootS;
+			height: 196rem/@rootS;
+			background: url(../assets/img/404.png) no-repeat;
+			background-size: contain;
+		}
+		.orange-text{
+			margin-top: 30rem/@rootS;
+			margin-bottom: 20rem/@rootS;
+			line-height: 50rem/@rootS;
+			font-size: 50rem/@rootS;
+			text-align: center;
+			color: #eb6100;
+		}
+		p{
+			text-align: center;
+			font-size: 34rem/@rootS;
+			color: #959595;
+		}
+		a{
+			display: inline-block;
+			margin-top: 50rem/@rootS;
+			width: 162rem/@rootS;
+			font-size: 28rem/@rootS;
+			text-align: center;
+			color: #959595;
+			span{
+				display: block;
+				margin-bottom: 18rem/@rootS;
+				width: 100%;
+				height: 91rem/@rootS;
+			}
+		}
+	}
+}
+
+/************* 底部菜单************/
+#footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width:100%;
+	background-color: #fafafa;
+	z-index: 1000;
+	nav{
+	  	padding: 13rem/@rootS 0;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	  	display: -webkit-flex;     /* NEW - Chrome */
+	  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+		-webkit-box-pack: justify;
+	    -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	    -webkit-box-align: center;
+	    -moz-box-align: justify;
+	    -ms-flex-align: center;
+		border-top: 1px solid #ccc;
+        justify-content: space-around;
+        align-items:center;
+	}
+	a{
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		-ms-box-flex: 1;
+		box-flex: 1;
+
+		flex: 1;
+	    box-sizing: border-box;
+		display: inline-block;
+		width: 120rem/@rootS;
+		text-align:  center;
+		&.cur{
+			color: #eb6100;
+		}
+		/* &:hover{
+			color: #eb6100;
+		}
+		&:focus{
+			color: #eb6100;
+		} */
+		.ticon{
+			display: block;
+			margin-bottom: 10rem/@rootS;
+			width: 100%;
+			height: 42rem/@rootS;
+			text-align: center;
+			font-size: 24rem/@root;
+			/* &.icon-home:before{
+				content: '';
+				display: inline-block;
+				width: 52rem/@rootS;
+				height: 42rem/@rootS;
+				background: url(../assets/img/home.png) no-repeat center center;
+				background-size: 100%;
+			}
+			&.icon-seek:before{
+				content: '';
+				display: inline-block;
+				width: 52rem/@rootS;
+				height: 42rem/@rootS;
+				background: url(../assets/img/zx.png) no-repeat center center;
+				background-size: 100%;
+			}
+			&.icon-user:before{
+				content: '';
+				display: inline-block;
+				width: 52rem/@rootS;
+				height: 42rem/@rootS;
+				background: url(../assets/img/user.png) no-repeat center center;
+				background-size: 100%;
+			}*/
+		}
+	}
+}

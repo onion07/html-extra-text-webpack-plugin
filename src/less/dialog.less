@@ -1,0 +1,167 @@
+@scale: 750/375; 
+@root: 12; 
+@rootS: 12*750/375;  // 设计图缩放，转化rem
+
+@import "../css/reset.less";
+
+._hide () {
+	display: none;
+}
+.hiden{
+	display: none;
+}
+.backdrop{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+.dialog{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 30%;
+	z-index: 1060;
+	text-align: center;
+	&.fll-alert{
+		top: 30rem/@rootS;
+		h4{
+			padding-bottom: 5rem/@rootS;
+			border-bottom: 1px solid #e60012;
+			font-size: 32rem/@rootS;
+			color: #e60012;
+		}
+		p{
+			height: 450px;
+			text-align: left;
+			font-size: 28rem/@rootS;
+			text-indent: 2em;
+		}
+	}
+	&.confirm{
+		h4{
+			padding: 15rem/@rootS;
+		}
+		p{
+			padding: 15rem/@rootS;
+			font-size: 38rem/@rootS;
+		}
+	}
+	h4{
+		margin-top: 10rem/@rootS;
+		margin-bottom: 15rem/@rootS;
+		text-align: center;
+		font-size: 40rem/@rootS;
+		line-height: 40rem/@rootS;
+
+	}
+	p{
+		word-wrap: break-word;
+		text-align: center;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;  
+	}
+}
+.dialog-open{
+	overflow: hidden;
+}
+.dialog-box{
+	display: inline-block;
+	width: 632rem/@rootS;
+	/*width: 87%;*/
+}
+.dialog-content{
+	padding: 30rem/@rootS;
+	border-radius: 20rem/@rootS;
+	background-color: #fff;
+}
+.dialog-header{
+	._hide();
+	margin-bottom: 30rem/@rootS;
+	border-bottom: 1px solid #ccc;
+	p{
+		text-align: left;
+	}
+}
+.dialog-body{
+	color: #a0a0a0;
+	p{
+		font-size: 30rem/@rootS;
+		line-height: 30rem/@rootS;
+	}
+}
+.dialog-footer{
+	margin-top: 30rem/@rootS;
+	.dialog-footer-inner{
+		text-align: center;
+	}
+	a,button{
+		display: inline-block;
+		width: 240rem/@rootS;
+		height: 68rem/@rootS;
+		line-height: 68rem/@rootS;
+		border: 0;
+		border-radius: 4px;
+		text-align: center;
+		font-size: 34rem/@rootS;
+		color: #fff;
+		outline: 0;
+	}
+	.cancel{
+		background-color: #959595;
+	}
+	.ok{
+		margin-left: 15rem/@rootS;
+		background-color: #e60012;
+	}
+	.defult{
+		width: 85%;
+		background-color: #e60012;
+
+	}
+}
+.img-box{
+	margin-bottom: 10rem/@rootS;
+	text-align: center;
+	img{
+		width: 154rem/@rootS;
+		height: 106rem/@rootS;
+	}
+}
+
+/* iphone 5/5s */
+@media screen and (max-width: 374px) {
+	
+	.dialog{
+		.dialog-box{
+			width: 550rem/@rootS;
+		}
+		h4{
+			font-size: 36rem/@rootS;
+			line-height: 36rem/@rootS;
+		}
+		&.fll-alert{
+			h4{
+				font-size: 28rem/@rootS;
+			}
+			p{
+				height: 380px;
+				font-size: 22rem/@rootS;
+			}
+		}
+	}
+	button{
+		&.cancel{
+			width: 200rem/@rootS;
+		}
+		&.ok{
+			width: 200rem/@rootS;
+		}
+	}
+}
